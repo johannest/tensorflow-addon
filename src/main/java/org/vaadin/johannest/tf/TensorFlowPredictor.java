@@ -25,6 +25,7 @@ public class TensorFlowPredictor {
 
     private void readModelGraph() {
         String modelPath = getFilesPath(modelFileName);
+        //String modelPath = "/home/dev/models/"+modelFileName;
         graphDef = readAllBytesOrExit(Paths.get(modelPath.startsWith("/C") ? modelPath.substring(1) : modelPath));
     }
 
@@ -41,6 +42,7 @@ public class TensorFlowPredictor {
 
     private void readClassLabels() {
         String labelsPath = getFilesPath(labelsFileName);
+        //String labelsPath = "/home/dev/models/"+labelsFileName;
         try (Stream<String> stream = Files.lines(Paths.get(labelsPath.startsWith("/C") ? labelsPath.substring(1) : labelsPath))) {
             stream.forEach(labels::add);
         } catch (IOException e) {

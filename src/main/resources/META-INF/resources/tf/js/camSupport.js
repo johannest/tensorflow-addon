@@ -35,7 +35,7 @@ var jsQRCam = {
         this.canvas = this.canvasElement.getContext("2d");
         this.loadingMessage = document.getElementById("jsQRCamLoadingMessage");
         // Use facingMode: environment to attemt to get the front camera on phones
-        navigator.mediaDevices.getUserMedia({video: {facingMode: "user"}}).then(function (stream) {
+        navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}}).then(function (stream) {
             jsQRCam.video.srcObject = stream;
             jsQRCam.video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
             jsQRCam.video.play();
