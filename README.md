@@ -2,7 +2,7 @@
 
 This is a Vaadin platform (Flow) addon for client-side image capturing and server-side Tensorflow integration.
 
-[Vaadin directory](https://vaadin.com/directory/component/tensorflow-addon)
+[Vaadin directory](https://vaadin.com/directory/component/tensorflow-add-on)
 
 Client side code is based on [qr-reader](https://vaadin.com/directory/component/qr-reader) add-on.
 
